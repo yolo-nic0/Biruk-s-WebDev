@@ -1,0 +1,190 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --pal1: #5BD07E;
+    --palFont2: #414141;
+    --pal3: #efefef;
+}
+body{
+    height: 100%;
+    width: 100%;
+}
+header{
+    width: 100%;
+    height: 4rem;
+    background-color: var(--pal3);
+    /* position: relative; */
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    z-index: 100;
+    top: 0;
+}
+nav{
+    width: 100%;
+    height: 100%;
+    background-color: var(--pal3);
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    padding-top: 1rem;
+}
+nav .logo{
+    width: 7rem;
+    /* background-color: var(--pal1); */
+    height: 100%;
+    margin-left: 1rem;
+    color: var(--palFont2);
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    padding-top: .5rem;
+}
+nav ul li a{
+    display: flex;
+    text-decoration: none;
+    margin: 0 1rem;
+    color: var(--palFont2);
+}
+nav .reg{
+    margin-right: 1rem;
+    padding-top: .5rem;
+}
+main{
+    width: 100%;
+    height: 100%;
+    background-color: var(--pal3);
+    /* background: url(assets/photo_2023-10-06_22-08-32.jpg);
+    background-position: center;
+    background-size: cover; */
+}
+#home{
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 4rem);
+    background: transparent;
+    position: relative;
+    background-color: var(--pal3);
+    flex-direction: row;
+}
+#home .cont1{
+    width: 50%;
+    height: 100%;
+    background-color: transparent;
+    flex-grow: 1;
+}
+#home .cont1 .cont1Text{
+    background-color: transparent;
+    margin-top: 30%;
+    transform: translatey(-30%);
+    padding-left: 5rem;
+}
+#home .cont1 .cont1Text h1{
+    font-size: 6dvw;
+    color: var(--palFont2);
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+#home .cont1 .cont1Text p{
+    font-size: 2dvw;
+    color: var(--palFont2);
+}
+#home .cont2{
+    width: 50%;
+    height: 100%;
+}
+#home .cont2 .backImg{
+    width: 100%;
+    height: 100%;
+}
+#home .cont2 .backImg img{
+    width: 100%;
+    height: 100%;
+}
+@media screen and (max-width: 680px) {
+    #home{
+        flex-flow: wrap;
+    }
+    #home .cont1{
+            width: 100%;
+            height: 30%;
+            overflow: hidden;
+        }
+    #home .cont2{
+            width: 100%;
+            height: 70%;
+        }
+    #home .cont1 .cont1Text{
+        margin-top: 5%;
+        padding-left: 2rem;
+        transform: translatey(-5%);
+    }
+    #home .cont1 .cont1Text h1{
+        font-size: 9dvw;
+        margin-bottom: 1rem;
+        margin-top: .5rem;
+    }
+    #home .cont1 .cont1Text p{
+        font-size: 4dvw;
+    }
+
+            }
+
+#part1{
+    width: 100%;
+    height: 100%;
+    background-color: var(--pal3);
+    padding-top: 3rem;
+}
+#part1 .container{
+    width: 100%;
+    height: auto;
+    background: transparent;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-flow: wrap;
+}
+#part1 .container .box{
+    width: 18rem;
+    height: 20rem;
+    margin: 1rem;
+    background-color: #efefef;
+    flex-grow: 1;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+#part1 .container .box .icon{
+    position: relative;
+    width: 100%;
+    height: 50%;
+    margin-bottom: 1rem;
+}
+#part1 .container .box .icon .icnhov{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    background-color: var();
+    margin-left: 50%;
+    transform: translateX(-50%);
+    transition: 500ms background-color ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+#part1 .container .box .icon .icnhov:hover{
+    background-color: #fff;
+}
+#part1 .container .box .texters{
+    width: 100%;
+    text-align: center;
+}
+
+
+
+#part2{
+    width: 100%;
+    height: 100vh;
+}
