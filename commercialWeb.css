@@ -243,8 +243,8 @@ main{
 }
 #home .cont1 .cont1Text{
     background-color: transparent;
-    margin-top: 50%;
-    transform: translatey(-50%);
+    margin-top: 30%;
+    transform: translatey(-30%);
     padding: 0 1rem;
 }
 #home .cont1 .cont1Text h1{
@@ -553,7 +553,7 @@ main{
     justify-content: space-around;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     padding: 0 6%;
 }
 #part6 .cont1, #part6 .cont2 {
@@ -596,6 +596,7 @@ main{
     background: #fff;
     font-size: 1rem;
     font-weight: 500;
+    transition: 500ms ease-in-out;
 }
 #part6 .content1 .tebut button{
     width: 10rem;
@@ -606,6 +607,17 @@ main{
     font-size: 1rem;
     color: #fff;
     font-weight: 500;
+    transition: 500ms ease-in-out;
+}
+#part6 .content1 .tebut button:hover{
+    background: var(--pal1);
+    border: var(--pal1);
+    color: var(--pal4);
+}
+#part6 .content2 .tebut button:hover{
+    background: var(--pal4);
+    border: var(--pal4);
+    color: var(--pal5);
 }
 
 #part6 .content1::after{
@@ -615,7 +627,7 @@ main{
     right: 3rem;
     width: 35%;
     height: 35%;
-    background: url(assets/icons8-sign-up-100.png);
+    background: url(assets/profile.svg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -626,7 +638,7 @@ main{
 #part6 .content2::after{
     content: ' ';
     position: absolute;
-    background: url(assets/icons8-log-in-100.png);
+    background: url(assets/noun-advisor-6358222.svg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
