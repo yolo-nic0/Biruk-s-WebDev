@@ -7,9 +7,11 @@
     scroll-behavior: smooth;
 }
 :root {
-    --pal1: #2dba69;
+    --pal1: #2DBA69;
     --palFont2: #414141;
     --pal3: #f3f3f3;
+    --pal4: #000;
+    --pal5: #fff;
     --font1: 'Lobster', sans-serif;
     --font2: 'Lobster Two', sans-serif;
     --font3: 'Lora', serif;
@@ -17,7 +19,7 @@
     --font5: 'Ubuntu', sans-serif;
     /* for desktop */
     --fontp: 1.2rem;
-    --fontheadp: 1.6rem;
+    --fontheadp: 1.4rem;
     --fonth1: 2.5rem;
     /* for Ipads */
 
@@ -35,6 +37,7 @@ header{
     width: 100%;
     height: 4rem;
     backdrop-filter: blur(3rem);
+    -webkit-backdrop-filter: blur(3rem);
     justify-content: center;
     transition:  500ms backdrop-filter ease-in-out;
     position: sticky;
@@ -199,41 +202,88 @@ main{
     background: transparent;
     position: relative;
     background-color: var(--pal3);
-    flex-direction: row;
+    /* flex-direction: row; */
+    flex-wrap: row wrap-reverse;
+    text-align: center;
 }
 #home .cont1{
     width: 50%;
     height: 100%;
     background-color: transparent;
-    flex-grow: 1;
+    /* background-color: red; */
+    order: 2;
+}
+#home .cont2{
+    width: 25%;
+    height: 100%;
+    order: 1;
+}
+#home .cont3{
+    width: 25%;
+    height: 100%;
+    order: 3;
+    /* background-color: green; */
+}
+@media all and (max-width: 1200px) {
+    .cont1{
+        order: 3;
+        width: 100%;
+        height: 50%;
+    }
+    .cont2{
+        order: 1;
+        width: 50%;
+        height: 50%;
+    }
+    .cont3{
+        order: 2;
+        width: 50%;
+        height: 50%;
+    }
 }
 #home .cont1 .cont1Text{
     background-color: transparent;
-    margin-top: 30%;
-    transform: translatey(-30%);
-    padding-left: 5rem;
+    margin-top: 50%;
+    transform: translatey(-50%);
+    padding: 0 1rem;
 }
 #home .cont1 .cont1Text h1{
-    font-size: 5rem;
+    font-size: 4rem;
     color: var(--palFont2);
-    margin-bottom: 2rem;
-    margin-top: 1rem;
+    /* margin-bottom: 1rem; */
+    font-weight: bolder;
 }
+#home .cont1 .cont1Text .today{
+    color: var(--pal1);
+    font-size: 4rem;
+}
+
 #home .cont1 .cont1Text p{
     font-size: var(--fontheadp);
     color: #5c5b5b;
 }
-#home .cont2{
-    width: 50%;
-    height: 100%;
-}
-#home .cont2 .backImg{
+#home .cont2 .backImg, #home .cont3 .backImg{
     width: 100%;
     height: 100%;
 }
-#home .cont2 .backImg img{
+#home .cont2 .backImg img, #home .cont3 .backImg img{
     width: 100%;
     height: 100%;
+}
+#home .cont1 a button{
+    width: 10rem;
+    height: 3rem;
+    margin-top: 1.5rem;
+    border: 0.1rem solid var(--pal1);
+    background: var(--pal1);
+    border-radius: .5rem;
+    color: var(--pal5);
+    font-size: 1rem;
+    transition: 500ms ease-in-out;
+}
+#home .cont1 a button:hover{
+    border: 0.1rem solid var(--pal4);
+    background: var(--pal4);
 }
 
 #part1{
@@ -241,7 +291,7 @@ main{
     height: 100%;
     background-color: var(--pal3);
     padding-top: 3rem;
-    padding: 0 10%;
+    padding: 0 6%;
 }
 #part1 .container{
     width: 100%;
@@ -279,6 +329,7 @@ main{
     transition: 500ms background-color ease-in-out;
     box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
+
 #part1 .container .box .icon .icnhov img{
     width: 60%;
     height: 60%;
@@ -288,10 +339,13 @@ main{
     transform: translateY(-50%);
 }
 #part1 .container .box:hover > .icon .icnhov{
-    background-color: #fff;
+    background-color: var(--pal5);
+}
+#part1 .container .box:hover > .icon .icnhov{
+    background-color: var(--pal1);
 }
 #part1 .container .box:hover{
-    background-color: #fff;
+    background-color: var(--pal5);
 }
 #part1 .container .box .texters{
     width: 100%;
@@ -302,7 +356,7 @@ main{
     color: var(--palFont2);
     transition: 500ms font-color ease-in-out;
 }
-#part1 .container .box .texters h1:hover{
+#part1 .container .box:hover >#part1 .container .box .texters h1{
     color: #000;
 }
 #part1 .container .box .texters p{
@@ -316,7 +370,7 @@ main{
     display: flex;
     justify-content: space-between;
     flex-grow: 1;
-    padding: 0 10%;
+    padding: 0 6%;
 }
 #part2 .content1{
     width: 50%;
@@ -364,7 +418,7 @@ main{
     display: flex;
     justify-content: space-between;
     flex-grow: 1;
-    padding: 0 10%;
+    padding: 0 6%;
 }
 #part3 .content1{
     width: 50%;
@@ -413,7 +467,7 @@ main{
     justify-content: space-between;
     flex-grow: 1;
     margin-bottom: 1rem;
-    padding: 0 10%;
+    padding: 0 6%;
     border-bottom: .2rem solid var(--pal1);
 }
 #part4 .content1{
@@ -459,7 +513,7 @@ main{
 #part5{
     width: 100%;
     height: 100%;
-    padding: 0 10%;
+    padding: 0 6%;
 }
 #part5 .comit{
     width: 100%;
@@ -477,12 +531,12 @@ main{
     margin: 1rem;
     text-align: center;
     border-radius: 1rem;
-    transition: 500ms background-color ease-in-out;
+    transition: 500ms ease-in-out;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
 }
 #part5 .comit .card:hover{
-    background-color: #000;
-    color: #fff;
+    background-color: var(--pal1);
+    color: var(--pal5);
 }
 #part5 .comit .card h1{
     font-size: 2.5rem;
@@ -500,15 +554,16 @@ main{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 0 10%;
+    padding: 0 6%;
 }
 #part6 .cont1, #part6 .cont2 {
-    width: 30rem;
+    width: 35srem;
     background: #fff;
     height: 22rem;
     position: relative;
     border-radius: 1rem;
     overflow: hidden;
+    flex-grow: 1;
     margin: 1rem;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
 }
@@ -738,7 +793,7 @@ footer {
 }
 
 #footer-distributed .footer-icons a:hover {
-    background-color: #3F71EA;
+    background-color: var(--pal1);
 }
 
 .footer-links a:hover {
